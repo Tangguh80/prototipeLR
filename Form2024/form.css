@@ -1,0 +1,1427 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@600&display=swap');
+
+
+body {
+    margin: 0;
+    background-color: var(--Hijau);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+:root{
+    --Abu:#73777a;
+    --Hijau: #18AA42;
+  }
+
+
+.kotak-form {
+    position: relative;
+    width: 40%;
+    border-radius: 15px;
+    max-width: 1200px;
+    height: auto; /* Mengubah tinggi menjadi otomatis */
+    background: rgb(255, 255, 255);
+    margin: 10px 40px;
+    padding: 30px 30px;
+    overflow: auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), /* Menambahkan bayangan ke semua sisi */
+                0 2px 4px rgba(0, 0, 0, 0.1),
+                0 2px 4px rgba(0, 0, 0, 0.1),
+                0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/*====================================== Judul ====================================*/
+
+.kotak-judul {
+    position: relative;
+    width: auto;
+    border-radius: 0px;
+    height: auto;
+    background: none;
+    margin: 0px;
+    overflow: auto;
+    padding: 0px; 
+}
+
+.kotak-judul h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 900;  
+    margin: 0; 
+    color: rgb(0, 0, 0); 
+}
+
+
+
+
+/*====================================== Subjudul ====================================*/
+
+.kotak-SubJudul {
+    position: relative;
+    width: auto;
+    border-radius: 0px;
+    height: auto;
+    background: none;
+    margin-top: 10px;
+    overflow: auto;
+    padding: 0px; 
+}
+
+
+
+
+.kotak-SubJudul h2 {
+    font-family: 'Lexend', Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 600;  
+    margin: 0; 
+    color: #333;
+    line-height: 1.6;
+    white-space: pre-line; 
+    text-align: justify;
+}
+
+
+
+/*====================================== Group Nama ====================================*/
+
+.form-group-Nama {
+    margin-top: 30px;
+}
+
+.form-group-Nama label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 5px; 
+    font-size: 14px;
+    font-family: 'Lexend', Arial, sans-serif;
+    color: var(--Abu); 
+}
+
+
+.form-group-Nama label.green {
+    color: green;
+}
+
+.kotak-nama {
+    display: flex;
+    align-items: center;
+    border: 1.5px solid var(--Abu); 
+    border-radius: 5px;
+    padding: 10px;
+    width: auto; 
+    background-color: #ffffff; 
+}
+
+.kotak-nama.green-border {
+    border-color: green;
+}
+
+.kotak-nama ion-icon {
+    font-size: 24px;
+    color: var(--Abu); 
+}
+
+.kotak-nama ion-icon.green-icon {
+    color: green;
+}
+
+.kotak-nama .separator {
+    height: 24px;
+    width: 1px;
+    background-color:var(--Abu); 
+    margin: 0 10px;
+}
+
+.kotak-nama .separator.green-separator {
+    background-color: green;
+}
+
+.kotak-nama input {
+    border: none;
+    outline: none;
+    font-size: 16px;
+    flex-grow: 1;
+    background: none;
+    color: #333; 
+}
+
+.kotak-nama input::placeholder {
+    color: #999; 
+}
+
+
+
+
+
+
+
+
+
+/*====================================== Group Email ====================================*/
+
+.form-group-Email {
+    margin-top: 30px;
+}
+
+.form-group-Email label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 5px; 
+    font-size: 14px;
+    font-family: 'Lexend', Arial, sans-serif;
+    color: var(--Abu); 
+}
+
+.form-group-Email label.green {
+    color: green;
+}
+
+.kotak-email {
+    display: flex;
+    align-items: center;
+    border: 1.5px solid var(--Abu); 
+    border-radius: 5px;
+    padding: 10px;
+    width: auto; 
+    background-color: #ffffff; 
+}
+
+.kotak-email.green-border {
+    border-color: green;
+}
+
+.kotak-email ion-icon {
+    font-size: 24px;
+    color: var(--Abu); 
+}
+
+.kotak-email ion-icon.green-icon {
+    color: green;
+}
+
+.kotak-email .separator {
+    height: 24px;
+    width: 1px;
+    background-color:var(--Abu); 
+    margin: 0 10px;
+}
+
+.kotak-email .separator.green-separator {
+    background-color: green;
+}
+
+.kotak-email input {
+    border: none;
+    outline: none;
+    font-size: 16px;
+    flex-grow: 1;
+    background: none;
+    color: #333; 
+}
+
+.kotak-email input::placeholder {
+    color: #999; 
+}
+
+
+
+
+
+
+
+
+
+/*====================================== Group Nomor HP ====================================*/
+
+.form-group-NomorHp {
+    margin-top: 30px;
+}
+
+.form-group-NomorHp label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 5px; 
+    font-size: 14px;
+    font-family: 'Lexend', Arial, sans-serif;
+    color: var(--Abu); 
+}
+
+.form-group-NomorHp label.green {
+    color: green;
+}
+
+.kotak-nomor-hp {
+    display: flex;
+    align-items: center;
+    border: 1.5px solid var(--Abu); 
+    border-radius: 5px;
+    padding: 10px;
+    width: auto; 
+    background-color: #ffffff; 
+}
+
+.kotak-nomor-hp.green-border {
+    border-color: green;
+}
+
+.kotak-nomor-hp ion-icon {
+    font-size: 24px;
+    color: var(--Abu); 
+}
+
+.kotak-nomor-hp ion-icon.green-icon {
+    color: green;
+}
+
+.kotak-nomor-hp .separator {
+    height: 24px;
+    width: 1px;
+    background-color:var(--Abu); 
+    margin: 0 10px;
+}
+
+.kotak-nomor-hp .separator.green-separator {
+    background-color: green;
+}
+
+.kotak-nomor-hp input {
+    border: none;
+    outline: none;
+    font-size: 16px;
+    flex-grow: 1;
+    background: none;
+    color: #333; 
+}
+
+.kotak-nomor-hp input::placeholder {
+    color: #999; 
+}
+
+
+
+
+
+
+
+
+
+/*====================================== Group Alamat ====================================*/
+
+.form-group-Alamat {
+    margin-top: 30px;
+}
+
+.form-group-Alamat label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 5px; 
+    font-size: 14px;
+    font-family: 'Lexend', Arial, sans-serif;
+    color: var(--Abu); 
+}
+
+.form-group-Alamat label.green {
+    color: green;
+}
+
+.kotak-alamat {
+    display: flex;
+    align-items: flex-start;
+    border: 1.5px solid var(--Abu); 
+    border-radius: 5px;
+    padding: 10px;
+    width: auto; 
+    background-color: #ffffff; 
+}
+
+.kotak-alamat.green-border {
+    border-color: green;
+}
+
+.kotak-alamat ion-icon {
+    font-size: 24px;
+    color: var(--Abu); 
+}
+
+.kotak-alamat ion-icon.green-icon {
+    color: green;
+}
+
+.kotak-alamat .separator {
+    height: 24px;
+    width: 1px;
+    background-color:var(--Abu); 
+    margin: 0 10px;
+}
+
+.kotak-alamat .separator.green-separator {
+    background-color: green;
+}
+
+.kotak-alamat textarea {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    flex-grow: 1;
+    background: none;
+    color: #333;
+    resize: vertical; /* Allows vertical resizing */
+}
+
+.kotak-alamat textarea::placeholder {
+    color: #999;
+}
+
+
+
+
+
+
+
+/*====================================== Group Status Mahasiswa ====================================*/
+
+.Status-Mahasiswa {
+    margin-top: 30px;
+}
+
+.Status-Mahasiswa label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-family: 'Lexend', Arial, sans-serif;
+    color: var(--Abu);
+}
+
+.kotak-status {
+    display: flex;
+    flex-direction: column;
+    border: 1.5px solid var(--Abu);
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #ffffff;
+}
+
+.kotak-status .checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.kotak-status label {
+    margin-left: 10px;
+    color: var(--Abu);
+    font-size: 14px;
+    font-family: 'Lexend', Arial, sans-serif;
+}
+
+.kotak-status input[type="checkbox"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1.5px solid var(--Abu);
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+}
+
+.kotak-status input[type="checkbox"]:checked::before {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--Hijau);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.kotak-status input[type="checkbox"]:checked + label {
+    color: green;
+}
+
+
+.Status-Mahasiswa.red .label-status-mhs {
+    color: red;
+}
+
+.kotak-status.red {
+    border: 1.5px solid red;
+}
+
+.kotak-status.red input[type="checkbox"] {
+    border: 1.5px solid red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*====================================== Group Asal Sekolah ====================================*/
+
+.form-group-AsalSekolah {
+    margin-top: 30px;
+}
+
+.form-group-AsalSekolah label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 5px; 
+    font-size: 14px;
+    font-family: 'Lexend', Arial, sans-serif;
+    color: var(--Abu); 
+}
+
+.form-group-AsalSekolah label.green {
+    color: green;
+}
+
+.kotak-asal-sekolah {
+    display: flex;
+    align-items: center;
+    border: 1.5px solid var(--Abu); 
+    border-radius: 5px;
+    padding: 10px;
+    width: auto; 
+    background-color: #ffffff; 
+}
+
+.kotak-asal-sekolah.green-border {
+    border-color: green;
+}
+
+.kotak-asal-sekolah ion-icon {
+    font-size: 24px;
+    color: var(--Abu); 
+}
+
+.kotak-asal-sekolah ion-icon.green-icon {
+    color: green;
+}
+
+.kotak-asal-sekolah .separator {
+    height: 24px;
+    width: 1px;
+    background-color:var(--Abu); 
+    margin: 0 10px;
+}
+
+.kotak-asal-sekolah .separator.green-separator {
+    background-color: green;
+}
+
+.kotak-asal-sekolah input {
+    border: none;
+    outline: none;
+    font-size: 16px;
+    flex-grow: 1;
+    background: none;
+    color: #333; 
+}
+
+.kotak-asal-sekolah input::placeholder {
+    color: #999; 
+}
+
+
+
+
+
+
+
+/*====================================== Group NIM ====================================*/
+
+.form-group-NIM {
+    margin-top: 30px;
+}
+
+.form-group-NIM label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 5px; 
+    font-size: 14px;
+    font-family: 'Lexend', Arial, sans-serif;
+    color: var(--Abu); 
+}
+
+.form-group-NIM label.green {
+    color: green;
+}
+
+.kotak-nim {
+    display: flex;
+    align-items: center;
+    border: 1.5px solid var(--Abu); 
+    border-radius: 5px;
+    padding: 10px;
+    width: auto; 
+    background-color: #ffffff; 
+}
+
+.kotak-nim.green-border {
+    border-color: green;
+}
+
+.kotak-nim ion-icon {
+    font-size: 24px;
+    color: var(--Abu); 
+}
+
+.kotak-nim ion-icon.green-icon {
+    color: green;
+}
+
+.kotak-nim .separator {
+    height: 24px;
+    width: 1px;
+    background-color:var(--Abu); 
+    margin: 0 10px;
+}
+
+.kotak-nim .separator.green-separator {
+    background-color: green;
+}
+
+.kotak-nim input {
+    border: none;
+    outline: none;
+    font-size: 16px;
+    flex-grow: 1;
+    background: none;
+    color: #333; 
+}
+
+.kotak-nim input::placeholder {
+    color: #999; 
+}
+
+
+
+
+/*====================================== Group Program Studi ====================================*/
+
+.form-group-ProgramStudi {
+    margin-top: 30px;
+}
+
+.form-group-ProgramStudi label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 5px; 
+    font-size: 14px;
+    font-family: 'Lexend', Arial, sans-serif;
+    color: var(--Abu); 
+}
+
+.form-group-ProgramStudi label.green {
+    color: green;
+}
+
+.kotak-program-studi {
+    display: flex;
+    align-items: center;
+    border: 1.5px solid var(--Abu); 
+    border-radius: 5px;
+    padding: 10px;
+    width: auto; 
+    background-color: #ffffff; 
+}
+
+.kotak-program-studi.green-border {
+    border-color: green;
+}
+
+.kotak-program-studi ion-icon {
+    font-size: 24px;
+    color: var(--Abu); 
+}
+
+.kotak-program-studi ion-icon.green-icon {
+    color: green;
+}
+
+.kotak-program-studi .separator {
+    height: 24px;
+    width: 1px;
+    background-color:var(--Abu); 
+    margin: 0 10px;
+}
+
+.kotak-program-studi .separator.green-separator {
+    background-color: green;
+}
+
+.kotak-program-studi input {
+    border: none;
+    outline: none;
+    font-size: 16px;
+    flex-grow: 1;
+    background: none;
+    color: #333; 
+}
+
+.kotak-program-studi input::placeholder {
+    color: #999; 
+}
+
+
+
+
+
+
+
+
+
+/*====================================== Group Kelas ====================================*/
+
+.form-group-Kelas {
+    margin-top: 30px;
+}
+
+.form-group-Kelas label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 5px; 
+    font-size: 14px;
+    font-family: 'Lexend', Arial, sans-serif;
+    color: var(--Abu); 
+}
+
+.form-group-Kelas label.green {
+    color: green;
+}
+
+.kotak-kelas {
+    display: flex;
+    align-items: center;
+    border: 1.5px solid var(--Abu); 
+    border-radius: 5px;
+    padding: 10px;
+    width: auto; 
+    background-color: #ffffff; 
+}
+
+.kotak-kelas.green-border {
+    border-color: green;
+}
+
+.kotak-kelas ion-icon {
+    font-size: 24px;
+    color: var(--Abu); 
+}
+
+.kotak-kelas ion-icon.green-icon {
+    color: green;
+}
+
+.kotak-kelas .separator {
+    height: 24px;
+    width: 1px;
+    background-color:var(--Abu); 
+    margin: 0 10px;
+}
+
+.kotak-kelas .separator.green-separator {
+    background-color: green;
+}
+
+.kotak-kelas input {
+    border: none;
+    outline: none;
+    font-size: 16px;
+    flex-grow: 1;
+    background: none;
+    color: #333; 
+}
+
+.kotak-kelas input::placeholder {
+    color: #999; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*====================================== Group Divisi Mekanik ====================================*/
+
+.form-group-Divisi-Mekanik {
+    margin-top: 30px;
+}
+
+.form-group-Divisi-Mekanik label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 5px; 
+    font-size: 14px;
+    font-family: 'Lexend', Arial, sans-serif;
+    color: var(--Abu); 
+}
+
+.kotak-divisi {
+    display: flex;
+    flex-direction: column;
+    border: 1.5px solid var(--Abu); 
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #ffffff; 
+}
+
+.kotak-divisi .checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.kotak-divisi label {
+    margin-left: 10px;
+    color: var(--Abu);
+    font-size: 14px;
+    font-family: 'Lexend', Arial, sans-serif;
+}
+
+.kotak-divisi input[type="checkbox"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1.5px solid var(--Hijau);
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+}
+
+.kotak-divisi input[type="checkbox"]:checked::before {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--Abu);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.kotak-divisi input[type="checkbox"]:checked + label {
+    color: green;
+}
+
+
+
+.form-group-Divisi-Mekanik.red .label-divisi-Mekanik {
+    color: red;
+}
+
+.kotak-divisi.red {
+    border: 1.5px solid red;
+}
+
+.kotak-divisi.red input[type="checkbox"] {
+    border: 1.5px solid red;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*====================================== Group Divisi Non Mekanik ====================================*/
+
+.form-group-Divisi-NonMekanik {
+    margin-top: 30px;
+}
+
+.form-group-Divisi-NonMekanik label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 5px; 
+    font-size: 14px;
+    font-family: 'Lexend', Arial, sans-serif;
+    color: var(--Abu); 
+}
+
+.kotak-divisi .checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.kotak-divisi label {
+    margin-left: 10px;
+    color: var(--Abu);
+    font-size: 14px;
+    font-family: 'Lexend', Arial, sans-serif;
+}
+
+.kotak-divisi input[type="checkbox"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1.5px solid var(--Abu);
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+}
+
+.kotak-divisi input[type="checkbox"]:checked::before {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--Hijau);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.kotak-divisi input[type="checkbox"]:checked + label {
+    color: green;
+}
+
+
+.form-group-Divisi-NonMekanik.red .label-divisi-nonmekanik {
+    color: red;
+}
+
+.kotak-divisi-nonmekanik.red {
+    border: 1.5px solid red;
+}
+
+.kotak-divisi-nonmekanik.red input[type="checkbox"] {
+    border: 1.5px solid red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*====================================== Group Alasan Memilih Divisi ====================================*/
+
+.form-group-AlasanDivisi {
+    margin-top: 30px;
+}
+
+.form-group-AlasanDivisi label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 5px; 
+    font-size: 14px;
+    font-family: 'Lexend', Arial, sans-serif;
+    color: var(--Abu); 
+}
+
+.form-group-AlasanDivisi label.green {
+    color: green;
+}
+
+.kotak-alasan-divisi {
+    display: flex;
+    align-items: flex-start;
+    border: 1.5px solid var(--Abu); 
+    border-radius: 5px;
+    padding: 10px;
+    width: auto; 
+    background-color: #ffffff; 
+}
+
+.kotak-alasan-divisi.green-border {
+    border-color: green;
+}
+
+.kotak-alasan-divisi ion-icon {
+    font-size: 24px;
+    color: var(--Abu); 
+}
+
+.kotak-alasan-divisi ion-icon.green-icon {
+    color: green;
+}
+
+.kotak-alasan-divisi .separator {
+    height: 24px;
+    width: 1px;
+    background-color: var(--Abu); 
+    margin: 0 10px;
+}
+
+.kotak-alasan-divisi .separator.green-separator {
+    background-color: green;
+}
+
+.kotak-alasan-divisi textarea {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    flex-grow: 1;
+    background: none;
+    color: #333;
+    resize: vertical; /* Allows vertical resizing */
+}
+
+.kotak-alasan-divisi textarea::placeholder {
+    color: #999;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*====================================== Group Riwayat Organisasi ====================================*/
+
+.form-group-RiwayatOrganisasi {
+    margin-top: 30px;
+}
+
+.form-group-RiwayatOrganisasi label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 5px; 
+    font-size: 14px;
+    font-family: 'Lexend', Arial, sans-serif;
+    color: var(--Abu); 
+}
+
+.form-group-RiwayatOrganisasi label.green {
+    color: green;
+}
+
+.kotak-riwayat-organisasi {
+    display: flex;
+    align-items: flex-start;
+    border: 1.5px solid var(--Abu); 
+    border-radius: 5px;
+    padding: 10px;
+    width: auto; 
+    background-color: #ffffff; 
+}
+
+.kotak-riwayat-organisasi.green-border {
+    border-color: green;
+}
+
+.kotak-riwayat-organisasi ion-icon {
+    font-size: 24px;
+    color: var(--Abu); 
+}
+
+.kotak-riwayat-organisasi ion-icon.green-icon {
+    color: green;
+}
+
+.kotak-riwayat-organisasi .separator {
+    height: 24px;
+    width: 1px;
+    background-color: var(--Abu); 
+    margin: 0 10px;
+}
+
+.kotak-riwayat-organisasi .separator.green-separator {
+    background-color: green;
+}
+
+.kotak-riwayat-organisasi textarea {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    flex-grow: 1;
+    background: none;
+    color: #333;
+    resize: vertical; /* Allows vertical resizing */
+}
+
+.kotak-riwayat-organisasi textarea::placeholder {
+    color: #999;
+}
+
+
+
+
+
+/*====================================== Group Kelebihan/Softskill ====================================*/
+
+.form-group-KelebihanSoftskill {
+    margin-top: 30px;
+}
+
+.form-group-KelebihanSoftskill label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 5px; 
+    font-size: 14px;
+    font-family: 'Lexend', Arial, sans-serif;
+    color: var(--Abu); 
+}
+
+.form-group-KelebihanSoftskill label.green {
+    color: green;
+}
+
+.kotak-kelebihan-softskill {
+    display: flex;
+    align-items: flex-start;
+    border: 1.5px solid var(--Abu); 
+    border-radius: 5px;
+    padding: 10px;
+    width: auto; 
+    background-color: #ffffff; 
+}
+
+.kotak-kelebihan-softskill.green-border {
+    border-color: green;
+}
+
+.kotak-kelebihan-softskill ion-icon {
+    font-size: 24px;
+    color: var(--Abu); 
+}
+
+.kotak-kelebihan-softskill ion-icon.green-icon {
+    color: green;
+}
+
+.kotak-kelebihan-softskill .separator {
+    height: 24px;
+    width: 1px;
+    background-color: var(--Abu); 
+    margin: 0 10px;
+}
+
+.kotak-kelebihan-softskill .separator.green-separator {
+    background-color: green;
+}
+
+.kotak-kelebihan-softskill textarea {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    flex-grow: 1;
+    background: none;
+    color: #333;
+    resize: vertical; /* Allows vertical resizing */
+}
+
+.kotak-kelebihan-softskill textarea::placeholder {
+    color: #999;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*====================================== Group Alasan Bergabung ====================================*/
+
+.form-group-AlasanBergabung {
+    margin-top: 30px;
+}
+
+.form-group-AlasanBergabung label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 5px; 
+    font-size: 14px;
+    font-family: 'Lexend', Arial, sans-serif;
+    color: var(--Abu); 
+}
+
+.form-group-AlasanBergabung label.green {
+    color: green;
+}
+
+.kotak-alasan-bergabung {
+    display: flex;
+    align-items: flex-start;
+    border: 1.5px solid var(--Abu); 
+    border-radius: 5px;
+    padding: 10px;
+    width: auto; 
+    background-color: #ffffff; 
+}
+
+.kotak-alasan-bergabung.green-border {
+    border-color: green;
+}
+
+.kotak-alasan-bergabung ion-icon {
+    font-size: 24px;
+    color: var(--Abu); 
+}
+
+.kotak-alasan-bergabung ion-icon.green-icon {
+    color: green;
+}
+
+.kotak-alasan-bergabung .separator {
+    height: 24px;
+    width: 1px;
+    background-color: var(--Abu); 
+    margin: 0 10px;
+}
+
+.kotak-alasan-bergabung .separator.green-separator {
+    background-color: green;
+}
+
+.kotak-alasan-bergabung textarea {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    flex-grow: 1;
+    background: none;
+    color: #333;
+    resize: vertical; /* Allows vertical resizing */
+}
+
+.kotak-alasan-bergabung textarea::placeholder {
+    color: #999;
+}
+
+
+
+
+
+
+
+/*====================================== Kotak Alert ====================================*/
+.alert-kosong {
+    display: none;
+    color: red;
+    margin-top: 5px;
+    font-size: 14px;
+    font-family: 'Lexend', Arial, sans-serif;
+    align-items: center;
+    overflow: hidden;
+    height: 0;
+    transition: height 0.5s ease-out;
+}
+
+.alert-kosong.show {
+    display: flex;
+    height: auto;
+    transition: height 0.5s ease-out;
+}
+
+.alert-kosong ion-icon {
+    margin-right: 5px;
+    font-size: 20px; /* Adjust the size as needed */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*====================================== Form Validation Message ====================================*/
+
+.form-validation-message {
+    color: red;
+    font-size: 14px;
+    font-family: 'Lexend', Arial, sans-serif;
+    margin-top: 10px;
+    display: none;
+    text-align: center; /* Center the message */
+}
+
+.form-validation-message.show {
+    display: block;
+}
+
+
+
+/*====================================== Group Submit Button ====================================*/
+
+.form-group-Submit {
+    margin-top: 30px;
+    text-align: center; 
+}
+
+.btn-submit {
+    width: 100%;
+    background-color: #28a745; 
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-family: 'Lexend', Arial, sans-serif;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #218838; 
+    transform: translateY(-3px); 
+}
+
+.btn-submit:active {
+    background-color: #1e7e34; 
+    transform: translateY(0); 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.show {
+    display: block;
+}
+
+
+
+
+
+
+
+/* Styles for red border, icon, separator, and label */
+.red {
+    color: red !important;
+}
+
+.red-border {
+    border-color: red !important;
+}
+
+.red-icon {
+    color: red !important;
+}
+
+.red-separator {
+    background-color: red !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 625px) {
+    .kotak-form {
+        position: relative;
+        width: 80%;
+        border-radius: 15px;
+        max-width: 1200px;
+        height: auto; /* Mengubah tinggi menjadi otomatis */
+        background: rgb(255, 255, 255);
+        margin: 10px 40px;
+        overflow: auto;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), /* Menambahkan bayangan ke semua sisi */
+                    0 2px 4px rgba(0, 0, 0, 0.1),
+                    0 2px 4px rgba(0, 0, 0, 0.1),
+                    0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+}

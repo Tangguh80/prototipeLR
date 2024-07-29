@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="form.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM2024</title>
+</head>
+<body>
+    
+    <div class="kotak-form" >
+
+        <div class="kotak-judul">
+            <h1>Pre Recruitment Anggota Logic Robotic Tahun 2024</h1>
+        </div>
+
+        <div class="kotak-SubJudul">
+            <h2>
+                Hai Mahasiswa/i Politeknik Negeri Cilacap!
+
+                Dalam rangka menyambut Dies Natalis Politeknik Negeri Cilacap yang ke-16, kami mengajak kalian untuk bergabung dalam kepanitiaan acara besar ini! Kesempatan ini terbuka bagi seluruh mahasiswa yang bersemangat, kreatif, dan siap berkontribusi untuk memeriahkan hari jadi kampus kita tercinta.
+
+                Persyaratan Umum:
+                1. Mahasiswa/i aktif Politeknik Negeri Cilacap Maba dan Tingkat 2
+                2. Memiliki dedikasi dalam berkontribusi untuk Politeknik Negeri Cilacap 
+                3. Mampu bekerja dalam tim
+                4. Bersedia mengikuti rapat dan kegiatan persiapan acara
+                5. Dokumen pendukung (CV) *dibawa sewaktu wawancara
+            </h2>
+        </div>
+
+            <!-- Form Input Nama Lengkap -->
+            <div class="form-group-Nama">
+                <label for="nama-lengkap" class="label-nama">Nama Lengkap</label>
+                <div class="kotak-nama" id="kotak-nama">
+                    <ion-icon name="person-sharp" id="icon-nama"></ion-icon>
+                    <div class="separator" id="separator-nama"></div>
+                    <input type="text" id="nama-lengkap" placeholder="Nama Anda" onfocus="focusFunction()" onblur="blurFunction()">
+                </div>
+                <div class="alert-kosong" id="alert-nama">
+                    <ion-icon name="alert-circle-outline"></ion-icon> Harap isi form ini
+                </div>
+            </div>
+
+
+        <div class="form-group-Email">
+            <label for="email" class="label-email">Email</label>
+            <div class="kotak-email" id="kotak-email">
+                <ion-icon name="mail-sharp" id="icon-email"></ion-icon>
+                <div class="separator" id="separator-email"></div>
+                <input type="email" id="email" placeholder="Email Anda" onfocus="focusEmail()" onblur="blurEmail()">
+            </div>
+            <div class="alert-kosong" id="alert-Email">
+                <ion-icon name="alert-circle-outline"></ion-icon> Harap isi form ini
+            </div>
+        </div>
+
+
+
+        <!-- Form Input Nomor HP -->
+        <div class="form-group-NomorHp">
+            <label for="nomor-hp" class="label-nomor-hp">Nomor HP</label>
+            <div class="kotak-nomor-hp" id="kotak-nomor-hp">
+                <ion-icon name="call-sharp" id="icon-nomor-hp"></ion-icon>
+                <div class="separator" id="separator-nomor-hp"></div>
+                <input type="tel" id="nomor-hp" placeholder="Nomor HP Anda" pattern="[0-9]*" inputmode="numeric" onfocus="focusHp()" onblur="blurHp()">
+            </div>
+            <div class="alert-kosong" id="alert-NomorHp">
+                <ion-icon name="alert-circle-outline"></ion-icon> Harap isi form ini
+            </div>
+        </div>
+
+
+
+
+ 
+        <div class="form-group-Alamat">
+            <label for="alamat" class="label-alamat">Alamat (Jika kos, isi dengan alamat kos)</label>
+            <div class="kotak-alamat" id="kotak-alamat">
+                <ion-icon name="home-sharp" id="icon-alamat"></ion-icon>
+                <div class="separator" id="separator-alamat"></div>
+                <textarea id="alamat" placeholder="Alamat Anda" onfocus="focusAlamat()" onblur="blurAlamat()"></textarea>
+            </div>
+            <div class="alert-kosong" id="alert-Alamat">
+                <ion-icon name="alert-circle-outline"></ion-icon> Harap isi form ini
+            </div>
+        </div>
+
+
+
+        <div class="Status-Mahasiswa">
+            <label for="Status-mhs" class="label-status-mhs">Status Mahasiswa</label>
+            <div class="kotak-status" id="kotak-status">
+                <div class="checkbox-container">
+                    <input type="checkbox" id="mhs-baru" name="status" value="Mahasiswa Baru" onclick="onlyOneStatus(this)">
+                    <label for="mhs-baru">Mahasiswa Baru</label>
+                </div>
+                <div class="checkbox-container">
+                    <input type="checkbox" id="mhs-semester2" name="status" value="Mahasiswa Semester 2" onclick="onlyOneStatus(this)">
+                    <label for="mhs-semester2">Mahasiswa Semester 2</label>
+                </div>
+            </div>
+            <div class="alert-kosong" id="alert-status">
+                <ion-icon name="alert-circle-outline"></ion-icon> Pilih Salah Satu
+            </div>
+        </div>
+        
+
+
+
+
+        <div class="form-group-AsalSekolah">
+            <label for="asal-sekolah" class="label-asal-sekolah">Alumni Sekolah (SMA, SMK, atau MA)</label>
+            <div class="kotak-asal-sekolah" id="kotak-asal-sekolah">
+                <ion-icon name="school-sharp" id="icon-asal-sekolah"></ion-icon>
+                <div class="separator" id="separator-asal-sekolah"></div>
+                <input type="text" id="asal-sekolah" placeholder="Asal Sekolah Anda" onfocus="focusSekolah()" onblur="blurSekolah()">
+            </div>
+            <div class="alert-kosong" id="alert-AlumniSekolah">
+                <ion-icon name="alert-circle-outline"></ion-icon> Harap isi form ini
+            </div>
+        </div>
+
+
+
+        <div class="form-group-NIM">
+            <label for="nim" class="label-nim">NIM</label>
+            <div class="kotak-nim" id="kotak-nim">
+                <ion-icon name="id-card-sharp" id="icon-nim"></ion-icon>
+                <div class="separator" id="separator-nim"></div>
+                <input type="number" id="nim" placeholder="NIM Anda" onfocus="focusNIM()" onblur="blurNIM()">
+            </div>
+            <div class="alert-kosong" id="alert-NIM">
+                <ion-icon name="alert-circle-outline"></ion-icon> Harap isi form ini
+            </div>
+        </div>
+
+
+        <div class="form-group-ProgramStudi">
+            <label for="program-studi" class="label-program-studi">Program Studi</label>
+            <div class="kotak-program-studi" id="kotak-program-studi">
+                <ion-icon name="book-sharp" id="icon-program-studi"></ion-icon>
+                <div class="separator" id="separator-program-studi"></div>
+                <input type="text" id="program-studi" placeholder="Program Studi Anda" onfocus="focusProgramStudi()" onblur="blurProgramStudi()">
+            </div>
+            <div class="alert-kosong" id="alert-ProgramStudi">
+                <ion-icon name="alert-circle-outline"></ion-icon> Harap isi form ini
+            </div>
+        </div>
+
+
+            <div class="form-group-Kelas">
+                <label for="kelas" class="label-kelas">Kelas</label>
+                <div class="kotak-kelas" id="kotak-kelas">
+                    <ion-icon name="easel-sharp" id="icon-kelas"></ion-icon>
+                    <div class="separator" id="separator-kelas"></div>
+                    <input type="text" id="kelas" placeholder="Kelas Anda" onfocus="focusKelas()" onblur="blurKelas()">
+                </div>
+                <div class="alert-kosong" id="alert-Kelas">
+                    <ion-icon name="alert-circle-outline"></ion-icon> Harap isi form ini
+                </div>
+            </div>
+
+
+
+
+
+            <div class="form-group-AlasanBergabung">
+                <label for="alasan-bergabung" class="label-alasan-bergabung">Alasan Bergabung dengan UKM Robotic</label>
+                <div class="kotak-alasan-bergabung" id="kotak-alasan-bergabung">
+                    <ion-icon name="pin-sharp" id="icon-alasan-bergabung"></ion-icon>
+                    <div class="separator" id="separator-alasan-bergabung"></div>
+                    <textarea id="alasan-bergabung" placeholder="Alasan Bergabung" onfocus="focusAlasanBergabung()" onblur="blurAlasanBergabung()"></textarea>
+                </div>
+                <div class="alert-kosong" id="alert-AlasanGabung">
+                    <ion-icon name="alert-circle-outline"></ion-icon> Harap isi form ini
+                </div>
+            </div>
+
+
+
+
+
+
+            <!-- Form Pilihan Divisi Mekanik -->
+            <div class="form-group-Divisi-Mekanik">
+                <label for="divisi" class="label-divisi-Mekanik">Pilih Divisi Mekanik</label>
+                <div class="kotak-divisi" id="kotak-divisi-Mekanik">
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="programming" name="divisi-mekanik" value="Programming" onclick="onlyOne(this)">
+                        <label for="programming">Programming</label>
+                    </div>
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="elektrikal-Mekanik" name="divisi-mekanik" value="Elektrikal & Mekanik" onclick="onlyOne(this)">
+                        <label for="elektrikal-Mekanik">Elektrikal & Mekanik</label>
+                    </div>
+                </div>
+                <div class="alert-kosong" id="alert-DevisiMekanik">
+                    <ion-icon name="alert-circle-outline"></ion-icon> Harap Pilih Salah Satu
+                </div>
+            </div>
+
+
+
+
+        <!-- Form Pilihan Divisi Non Mekanik -->
+        <div class="form-group-Divisi-NonMekanik">
+            <label for="divisi-nonmekanik" class="label-divisi-nonmekanik">Pilih Divisi Non Mekanik</label>
+            <div class="kotak-divisi" id="kotak-divisi-nonmekanik">
+                <div class="checkbox-container">
+                    <input type="checkbox" id="public-relation" name="divisi-nonmekanik" value="Public Relation" onclick="onlyOneNonMekanik(this)">
+                    <label for="public-relation">Public Relation</label>
+                </div>
+                <div class="checkbox-container">
+                    <input type="checkbox" id="human-resource" name="divisi-nonmekanik" value="Human Resource" onclick="onlyOneNonMekanik(this)">
+                    <label for="human-resource">Human Resource</label>
+                </div>
+                <div class="checkbox-container">
+                    <input type="checkbox" id="financial-income" name="divisi-nonmekanik" value="Financial Income" onclick="onlyOneNonMekanik(this)">
+                    <label for="financial-income">Financial Income</label>
+                </div>
+                <div class="checkbox-container">
+                    <input type="checkbox" id="media-organizer" name="divisi-nonmekanik" value="Media Organizer" onclick="onlyOneNonMekanik(this)">
+                    <label for="media-organizer">Media Organizer</label>
+                </div>
+                <div class="checkbox-container">
+                    <input type="checkbox" id="tool-scrib" name="divisi-nonmekanik" value="ToolScrib" onclick="onlyOneNonMekanik(this)">
+                    <label for="tool-scrib">ToolScrib</label>
+                </div>
+            </div>
+            <div class="alert-kosong" id="alert-DevisiNonMekanik">
+                <ion-icon name="alert-circle-outline"></ion-icon> Harap Pilih Salah Satu
+            </div>
+        </div>
+
+
+
+                    <!-- Form Alasan Memilih Divisi -->
+            <div class="form-group-AlasanDivisi">
+                <label for="alasan-divisi" class="label-alasan-divisi">Alasan Memilih Divisi</label>
+                <div class="kotak-alasan-divisi" id="kotak-alasan-divisi">
+                    <ion-icon name="chatbubbles-sharp" id="icon-alasan-divisi"></ion-icon>
+                    <div class="separator" id="separator-alasan-divisi"></div>
+                    <textarea id="alasan-divisi" placeholder="Alasan Memilih Divisi ini" onfocus="focusAlasanDivisi()" onblur="blurAlasanDivisi()"></textarea>
+                </div>
+                <div class="alert-kosong" id="alert-AlasanDivisi">
+                    <ion-icon name="alert-circle-outline"></ion-icon> Harap isi form ini
+                </div>
+            </div>
+
+
+
+
+
+            <div class="form-group-RiwayatOrganisasi">
+                <label for="riwayat-organisasi" class="label-riwayat-organisasi">Riwayat Organisasi , isi (-) bila tidak ada</label>
+                <div class="kotak-riwayat-organisasi" id="kotak-riwayat-organisasi">
+                    <ion-icon name="people-sharp" id="icon-riwayat-organisasi"></ion-icon>
+                    <div class="separator" id="separator-riwayat-organisasi"></div>
+                    <textarea id="riwayat-organisasi" placeholder="Riwayat Organisasi Anda" onfocus="focusRiwayatOrganisasi()" onblur="blurRiwayatOrganisasi()"></textarea>
+                </div>
+                <div class="alert-kosong" id="alert-RiwayatOrganisasi">
+                    <ion-icon name="alert-circle-outline"></ion-icon> Harap isi form ini
+                </div>
+            </div>
+
+
+
+
+
+            <div class="form-group-KelebihanSoftskill">
+                <label for="kelebihan-softskill" class="label-kelebihan-softskill">Kelebihan/Softskill, isi (-) bila tidak ada</label>
+                <div class="kotak-kelebihan-softskill" id="kotak-kelebihan-softskill">
+                    <ion-icon name="trending-up-sharp" id="icon-kelebihan-softskill"></ion-icon>
+                    <div class="separator" id="separator-kelebihan-softskill"></div>
+                    <textarea id="kelebihan-softskill" placeholder="Kelebihan/Softskill Anda" onfocus="focusKelebihanSoftskill()" onblur="blurKelebihanSoftskill()"></textarea>
+                </div>
+                <div class="alert-kosong" id="alert-Softskill">
+                    <ion-icon name="alert-circle-outline"></ion-icon> Harap isi form ini
+                </div>
+            </div>
+
+
+
+
+
+
+
+                            <!-- Form Submit Button -->
+                <div class="form-group-Submit">
+                    <button type="button" class="btn-submit" onclick="validateForm()">Submit</button>
+                </div>
+                <div class="form-validation-message" id="form-validation-message"></div>
+
+
+
+
+
+
+        
+
+        
+        
+        
+        
+    </div>
+
+
+
+<script src="form.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>
