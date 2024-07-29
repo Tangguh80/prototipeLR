@@ -1006,6 +1006,22 @@ body {
     color: #999;
 }
 
+.kotak-alasan-divisi textarea {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    font-family: Arial, sans-serif; /* Menggunakan font standar */
+    color: #333;
+    resize: vertical; /* Allows vertical resizing */
+    background: none;
+}
+
+.kotak-alasan-divisi textarea::placeholder {
+    color: #999;
+    font-family: Arial, sans-serif; /* Menggunakan font standar untuk placeholder */
+}
+
 
 
 
@@ -1085,6 +1101,22 @@ body {
     color: #999;
 }
 
+.kotak-riwayat-organisasi textarea {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    font-family: Arial, sans-serif; /* Menggunakan font standar */
+    color: #333;
+    resize: vertical; /* Allows vertical resizing */
+    background: none;
+}
+
+.kotak-riwayat-organisasi textarea::placeholder {
+    color: #999;
+    font-family: Arial, sans-serif; /* Menggunakan font standar untuk placeholder */
+}
+
 
 
 
@@ -1147,15 +1179,17 @@ body {
     border: none;
     outline: none;
     font-size: 16px;
-    flex-grow: 1;
-    background: none;
+    font-family: Arial, sans-serif; /* Menggunakan font standar */
     color: #333;
     resize: vertical; /* Allows vertical resizing */
+    background: none;
 }
 
 .kotak-kelebihan-softskill textarea::placeholder {
     color: #999;
+    font-family: Arial, sans-serif; /* Menggunakan font standar untuk placeholder */
 }
+
 
 
 
@@ -1234,6 +1268,23 @@ body {
 
 .kotak-alasan-bergabung textarea::placeholder {
     color: #999;
+}
+
+
+.kotak-alasan-bergabung textarea {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    font-family: Arial, sans-serif; /* Menggunakan font standar */
+    color: #333;
+    resize: vertical; /* Allows vertical resizing */
+    background: none;
+}
+
+.kotak-alasan-bergabung textarea::placeholder {
+    color: #999;
+    font-family: Arial, sans-serif; /* Menggunakan font standar untuk placeholder */
 }
 
 
