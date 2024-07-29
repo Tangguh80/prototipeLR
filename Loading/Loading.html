@@ -33,6 +33,10 @@
 
                     setTimeout(() => {
                         logo6.style.transform = 'scale(100)'; 
+                        setTimeout(() => {
+                            // After the scale animation, redirect to the specified page
+                            window.location.href = '/Form2024/Form.html';
+                        }, 500); // Redirect after the scale animation is complete
                     }, 1000); // Start enlarging after a delay
                 }, 1000); // 1 second delay after .Logo maxWidth is set
             }, 500); // Delay matches the SlideRight animation duration
