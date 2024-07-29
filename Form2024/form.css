@@ -37,24 +37,27 @@ body {
 
 
 /*====================================== Judul ====================================*/
-
 .kotak-judul {
     position: relative;
     width: auto;
-    border-radius: 0px;
+    border-radius: 10px;
     height: auto;
-    background: none;
-    margin: 0px;
-    overflow: auto;
-    padding: 0px; 
+    background: linear-gradient(135deg, #14fd3e 0%,#18AA42 100%);
+    margin: 20px 0;
+    overflow: hidden;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 .kotak-judul h1 {
     font-family: 'Poppins', sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 900;  
     margin: 0; 
-    color: rgb(0, 0, 0); 
+    color: #FFFFFF; 
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 
@@ -373,6 +376,7 @@ body {
     flex-grow: 1;
     background: none;
     color: #333;
+    min-height: 100px;
     resize: vertical; /* Allows vertical resizing */
 }
 
@@ -1013,6 +1017,7 @@ body {
     font-size: 16px;
     font-family: Arial, sans-serif; /* Menggunakan font standar */
     color: #333;
+    min-height: 100px;
     resize: vertical; /* Allows vertical resizing */
     background: none;
 }
@@ -1108,6 +1113,7 @@ body {
     font-size: 16px;
     font-family: Arial, sans-serif; /* Menggunakan font standar */
     color: #333;
+    min-height: 100px;
     resize: vertical; /* Allows vertical resizing */
     background: none;
 }
@@ -1181,6 +1187,7 @@ body {
     font-size: 16px;
     font-family: Arial, sans-serif; /* Menggunakan font standar */
     color: #333;
+    min-height: 100px;
     resize: vertical; /* Allows vertical resizing */
     background: none;
 }
@@ -1278,6 +1285,7 @@ body {
     font-size: 16px;
     font-family: Arial, sans-serif; /* Menggunakan font standar */
     color: #333;
+    min-height: 100px;
     resize: vertical; /* Allows vertical resizing */
     background: none;
 }
