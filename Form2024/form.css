@@ -452,6 +452,7 @@ body {
     font-size: 14px;
     flex-grow: 1;
     background: none;
+    font-family: Arial, sans-serif;
     color: #333;
     min-height: 100px;
     resize: vertical; /* Allows vertical resizing */
@@ -1366,6 +1367,94 @@ body {
 
 
 
+/*====================================== Kotak note ====================================*/
+.kotak-note {
+    display: flex;
+    align-items: center;
+    background-color: #ffe0665d;
+    font-weight: 700;
+    font-size: 10px;
+    font-family: 'Lexend', Arial, sans-serif;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+.kotak-note ion-icon {
+    font-size: 25px;
+    margin-right: 10px;
+    color: #000;
+}
+
+
+
+
+/*====================================== Kotak footer ====================================*/
+.footer {
+    display: flex;
+    justify-content: center; 
+    width: 52%; 
+    max-width: 1200px;
+    height: auto;
+    background: none;
+    margin: 50px auto;
+    padding: 0px;
+    padding-top: 10px;
+    overflow: auto;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between; 
+    width: 100%; 
+}
+
+.footer-kiri, .footer-tengah, .footer-kanan {
+    background-color: none;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-left: 70px;
+}
+
+.footer-kiri h3, .footer-tengah h3, .footer-kanan h3 {
+    width: auto;
+    font-size: 14px; 
+    border-radius: 15px;
+    padding: 0px;
+    color: #094222;
+    font-family: 'Lexend', Arial, sans-serif;
+    margin-bottom: 10px;
+    text-align: left; 
+}
+
+.footer a {
+    color:#094222;
+    text-decoration: none;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    font-family: 'Lexend', Arial, sans-serif;
+    font-size: 10px;
+    text-align: left; 
+    margin-bottom: 10px;
+}
+
+.footer a ion-icon {
+    color: #094222;
+    font-size: 10px;
+    margin-right: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*====================================== Kotak Alert ====================================*/
@@ -1572,6 +1661,33 @@ body {
                     0 2px 4px rgba(0, 0, 0, 0.1),
                     0 2px 4px rgba(0, 0, 0, 0.1);
     }
+
+
+
+    .footer {
+        display: flex;
+        justify-content: space-between; 
+        align-items: flex-start; 
+        width: 55%; 
+        max-width: 1200px;
+        height: auto;
+        background:none;
+        margin: 50px auto; 
+        padding: 0px;
+        padding-top: 10px;
+        overflow: auto;
+
+    }
+
+
+    .footer-kiri, .footer-tengah, .footer-kanan {
+        background-color: none;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        margin-left: 0px;
+    }
+
     
 
     
@@ -1668,6 +1784,31 @@ body {
                     0 2px 4px rgba(0, 0, 0, 0.1);
     }
 
+
+    .footer {
+        display: flex;
+        justify-content: space-between; 
+        align-items: flex-start; 
+        width: 55%; 
+        max-width: 1200px;
+        height: auto;
+        background: none;
+        margin: 50px auto; 
+        padding: 0px;
+        padding-top: 10px;
+        overflow: auto;
+
+    }
+
+
+    .footer-kiri, .footer-tengah, .footer-kanan {
+        background-color: none;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        margin-left: 20px;
+    }
+
     
 }
 
@@ -1714,6 +1855,22 @@ body {
                     0 2px 4px rgba(0, 0, 0, 0.1);
     }
 
+
+    .footer {
+        display: flex;
+        justify-content: space-between; 
+        align-items: flex-start; 
+        width: 85%; 
+        max-width: 1200px;
+        height: auto;
+        background: none;
+        margin: 50px auto; 
+        padding: 0px;
+        padding-top: 10px;
+        overflow: auto;
+
+    }
+
 }
 
 
@@ -1756,6 +1913,20 @@ body {
                     0 2px 4px rgba(0, 0, 0, 0.1),
                     0 2px 4px rgba(0, 0, 0, 0.1),
                     0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .footer {
+        display: flex;
+        justify-content: space-between; 
+        align-items: flex-start; 
+        width: 88%; 
+        max-width: 1200px;
+        height: auto;
+        background: none;
+        margin: 50px auto; 
+        padding: 0px;
+        padding-top: 10px;
+        overflow: auto;
     }
 
 }
