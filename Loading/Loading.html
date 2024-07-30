@@ -21,26 +21,28 @@
     </div>
     
     <script>
+setTimeout(() => {
+    document.querySelector('.Logo').style.animation = 'SlideRight 0.5s ease-in-out forwards';
+    setTimeout(() => {
+        document.querySelector('.Logo').style.maxWidth = '130px';
         setTimeout(() => {
-            document.querySelector('.Logo').style.animation = 'SlideRight 0.5s ease-in-out forwards';
-            setTimeout(() => {
-                document.querySelector('.Logo').style.maxWidth = '130px';
-                setTimeout(() => {
-                    const logo6 = document.querySelector('.Logo6');
-                    logo6.style.display = 'flex'; 
-                    logo6.style.opacity = '1'; 
-                    logo6.style.transform = 'scale(1)'; 
+            const logo6 = document.querySelector('.Logo6');
+            logo6.style.display = 'flex'; 
+            logo6.style.opacity = '1'; 
+            logo6.style.transform = 'scale(1)'; 
 
-                    setTimeout(() => {
-                        logo6.style.transform = 'scale(100)'; 
-                        setTimeout(() => {
-                            // After the scale animation, redirect to the specified page
-                            window.location.href = '/Form2024/Form.html';
-                        }, 500); // Redirect after the scale animation is complete
-                    }, 1000); // Start enlarging after a delay
-                }, 1000); // 1 second delay after .Logo maxWidth is set
-            }, 500); // Delay matches the SlideRight animation duration
-        }, 5000); // Initial delay before starting the SlideRight animation
+            setTimeout(() => {
+                logo6.style.transform = 'scale(200)'; 
+
+                // Add a delay before redirecting to the new page to ensure the enlargement animation completes
+                setTimeout(() => {
+                    window.location.href = '/Form2024/form.html'; // Replace with your desired URL
+                }, 500); // Adjust delay as needed
+            }, 1000); // Start enlarging after a delay
+        }, 1000); // 1 second delay after .Logo maxWidth is set
+    }, 500); // Delay matches the SlideRight animation duration
+}, 5000); // Initial delay before starting the SlideRight animation
+
     </script>
     
     
