@@ -110,6 +110,9 @@ document.getElementById('nomor-hp').addEventListener('input', function (event) {
 
 
 
+
+
+
 function focusAlamat() {
     document.querySelector('.label-alamat').classList.add('green');
     document.getElementById('kotak-alamat').classList.add('green-border');
@@ -125,6 +128,14 @@ function blurAlamat() {
         document.getElementById('kotak-alamat').classList.add('red-border');
         document.getElementById('icon-alamat').classList.add('red-icon');
         document.getElementById('separator-alamat').classList.add('red-separator');
+        alertBox.innerHTML = '<ion-icon name="alert-circle-outline"></ion-icon> Harap isi form ini';
+        alertBox.classList.add('show'); // Show alert box
+    } else if (input.value.trim().split(/\s+/).length > 100) {
+        document.querySelector('.label-alamat').classList.add('red');
+        document.getElementById('kotak-alamat').classList.add('red-border');
+        document.getElementById('icon-alamat').classList.add('red-icon');
+        document.getElementById('separator-alamat').classList.add('red-separator');
+        alertBox.innerHTML = '<ion-icon name="alert-circle-outline"></ion-icon> Maksimal 100 Kata';
         alertBox.classList.add('show'); // Show alert box
     } else {
         document.querySelector('.label-alamat').classList.remove('green', 'red');
@@ -134,6 +145,35 @@ function blurAlamat() {
         alertBox.classList.remove('show'); // Hide alert box
     }
 }
+
+function checkWordCountAlamat() {
+    var input = document.getElementById('alamat');
+    var alertBox = document.getElementById('alert-Alamat');
+    if (input.value.trim().split(/\s+/).length > 100) {
+        document.querySelector('.label-alamat').classList.add('red');
+        document.getElementById('kotak-alamat').classList.add('red-border');
+        document.getElementById('icon-alamat').classList.add('red-icon');
+        document.getElementById('separator-alamat').classList.add('red-separator');
+        alertBox.innerHTML = '<ion-icon name="alert-circle-outline"></ion-icon> Maksimal 100 Kata';
+        alertBox.classList.add('show'); // Show alert box
+    } else {
+        document.querySelector('.label-alamat').classList.remove('red');
+        document.getElementById('kotak-alamat').classList.remove('red-border');
+        document.getElementById('icon-alamat').classList.remove('red-icon');
+        document.getElementById('separator-alamat').classList.remove('red-separator');
+        alertBox.classList.remove('show'); // Hide alert box if word count is within limit
+    }
+}
+
+
+
+
+
+
+
+
+
+
 
 function focusSekolah() {
     document.querySelector('.label-asal-sekolah').classList.add('green');
@@ -180,6 +220,14 @@ function blurNIM() {
         document.getElementById('kotak-nim').classList.add('red-border');
         document.getElementById('icon-nim').classList.add('red-icon');
         document.getElementById('separator-nim').classList.add('red-separator');
+        alertBox.innerHTML = '<ion-icon name="alert-circle-outline"></ion-icon> Harap isi form ini';
+        alertBox.classList.add('show'); // Show alert box
+    } else if (input.value.length < 11) {
+        document.querySelector('.label-nim').classList.add('red');
+        document.getElementById('kotak-nim').classList.add('red-border');
+        document.getElementById('icon-nim').classList.add('red-icon');
+        document.getElementById('separator-nim').classList.add('red-separator');
+        alertBox.innerHTML = '<ion-icon name="alert-circle-outline"></ion-icon> Minimal 11 angka';
         alertBox.classList.add('show'); // Show alert box
     } else {
         document.querySelector('.label-nim').classList.remove('green', 'red');
@@ -189,6 +237,9 @@ function blurNIM() {
         alertBox.classList.remove('show'); // Hide alert box
     }
 }
+
+
+
 
 function focusProgramStudi() {
     document.querySelector('.label-program-studi').classList.add('green');
@@ -537,145 +588,26 @@ function onlyOneStatus(checkbox) {
     var checkboxes = document.getElementsByName('status');
     var statusContainer = document.querySelector('.Status-Mahasiswa');
     var kotakStatus = document.getElementById('kotak-status');
-
+    var alertElement = document.getElementById('alert-status');
+    var anyChecked = false;
 
     checkboxes.forEach((item) => {
         if (item !== checkbox) item.checked = false;
+        if (item.checked) anyChecked = true;
     });
 
-
-    if (checkbox.checked) {
+    if (anyChecked) {
         statusContainer.classList.remove('red');
         kotakStatus.classList.remove('red');
-        removeAlert('alert-status'); 
+        alertElement.classList.remove('show'); 
     } else {
         statusContainer.classList.add('red');
         kotakStatus.classList.add('red');
-        showAlert('alert-status'); 
-    }
-
-
-    if (checkbox.id === "mhs-baru" && checkbox.checked) {
-        document.getElementById('nim').value = 0;
-        document.getElementById('nim').disabled = true;
-        document.getElementById('kelas').value = 0;
-        document.getElementById('kelas').disabled = true;
-        document.getElementById('asal-sekolah').value = "";
-        document.getElementById('asal-sekolah').disabled = false;
-
-
-        blurSekolah();
-        blurNIM();
-        blurKelas();
-    } else if (checkbox.id === "mhs-semester2" && checkbox.checked) {
-        document.getElementById('asal-sekolah').value = "-";
-        document.getElementById('asal-sekolah').disabled = true;
-        document.getElementById('nim').value = "";
-        document.getElementById('nim').disabled = false;
-        document.getElementById('kelas').value = "";
-        document.getElementById('kelas').disabled = false;
-
-        blurSekolah();
-        blurNIM();
-        blurKelas();
-    } else {
-        document.getElementById('asal-sekolah').value = "";
-        document.getElementById('asal-sekolah').disabled = false;
-        document.getElementById('nim').value = "";
-        document.getElementById('nim').disabled = false;
-        document.getElementById('kelas').value = "";
-        document.getElementById('kelas').disabled = false;
-
-
-        blurSekolah();
-        blurNIM();
-        blurKelas();
+        alertElement.classList.add('show'); 
     }
 }
 
-/*====================================== focus and blur functions====================================*/
-function focusSekolah() {
-    document.querySelector('.label-asal-sekolah').classList.add('focus');
-    document.getElementById('kotak-asal-sekolah').classList.add('focus-border');
-    document.getElementById('icon-asal-sekolah').classList.add('focus-icon');
-    document.getElementById('separator-asal-sekolah').classList.add('focus-separator');
-}
 
-function blurSekolah() {
-    var input = document.getElementById('asal-sekolah');
-    var alertBox = document.getElementById('alert-AlumniSekolah');
-    if (input.value.trim() === "" && input.value !== "0" && input.value !== "-") {
-        document.querySelector('.label-asal-sekolah').classList.add('red');
-        document.getElementById('kotak-asal-sekolah').classList.add('red-border');
-        document.getElementById('icon-asal-sekolah').classList.add('red-icon');
-        document.getElementById('separator-asal-sekolah').classList.add('red-separator');
-        showAlert('alert-AlumniSekolah');
-    } else {
-        document.querySelector('.label-asal-sekolah').classList.remove('red');
-        document.getElementById('kotak-asal-sekolah').classList.remove('red-border');
-        document.getElementById('icon-asal-sekolah').classList.remove('red-icon');
-        document.getElementById('separator-asal-sekolah').classList.remove('red-separator');
-        removeAlert('alert-AlumniSekolah');
-    }
-}
-
-function focusNIM() {
-    document.querySelector('.label-nim').classList.add('focus');
-    document.getElementById('kotak-nim').classList.add('focus-border');
-    document.getElementById('icon-nim').classList.add('focus-icon');
-    document.getElementById('separator-nim').classList.add('focus-separator');
-}
-
-function blurNIM() {
-    var input = document.getElementById('nim');
-    var alertBox = document.getElementById('alert-NIM');
-    if (input.value.trim() === "" && input.value !== "0") {
-        document.querySelector('.label-nim').classList.add('red');
-        document.getElementById('kotak-nim').classList.add('red-border');
-        document.getElementById('icon-nim').classList.add('red-icon');
-        document.getElementById('separator-nim').classList.add('red-separator');
-        showAlert('alert-NIM');
-    } else {
-        document.querySelector('.label-nim').classList.remove('red');
-        document.getElementById('kotak-nim').classList.remove('red-border');
-        document.getElementById('icon-nim').classList.remove('red-icon');
-        document.getElementById('separator-nim').classList.remove('red-separator');
-        removeAlert('alert-NIM');
-    }
-}
-
-function focusKelas() {
-    document.querySelector('.label-kelas').classList.add('focus');
-    document.getElementById('kotak-kelas').classList.add('focus-border');
-    document.getElementById('icon-kelas').classList.add('focus-icon');
-    document.getElementById('separator-kelas').classList.add('focus-separator');
-}
-
-function blurKelas() {
-    var input = document.getElementById('kelas');
-    var alertBox = document.getElementById('alert-Kelas');
-    if (input.value.trim() === "" && input.value !== "0") {
-        document.querySelector('.label-kelas').classList.add('red');
-        document.getElementById('kotak-kelas').classList.add('red-border');
-        document.getElementById('icon-kelas').classList.add('red-icon');
-        document.getElementById('separator-kelas').classList.add('red-separator');
-        showAlert('alert-Kelas');
-    } else {
-        document.querySelector('.label-kelas').classList.remove('red');
-        document.getElementById('kotak-kelas').classList.remove('red-border');
-        document.getElementById('icon-kelas').classList.remove('red-icon');
-        document.getElementById('separator-kelas').classList.remove('red-separator');
-        removeAlert('alert-Kelas');
-    }
-}
-
-function showAlert(alertId) {
-    document.getElementById(alertId).classList.add('show');
-}
-
-function removeAlert(alertId) {
-    document.getElementById(alertId).classList.remove('show');
-}
 
 
 
@@ -781,6 +713,25 @@ function onlyOneNonMekanik(checkbox) {
 
 
 
+function checkWordCountAlamat() {
+    checkWordCount('alamat', 'label-alamat', 'alert-Alamat', 100);
+}
+
+function checkWordCountAlasanBergabung() {
+    checkWordCount('alasan-bergabung', 'label-alasan-bergabung', 'alert-AlasanGabung', 200);
+}
+
+function checkWordCountDivisi() {
+    checkWordCount('alasan-divisi', 'label-alasan-divisi', 'alert-AlasanDivisi', 200);
+}
+
+function checkWordCountOrganisasi() {
+    checkWordCount('riwayat-organisasi', 'label-riwayat-organisasi', 'alert-RiwayatOrganisasi', 100);
+}
+
+function checkWordCountSoftskill() {
+    checkWordCount('kelebihan-softskill', 'label-kelebihan-softskill', 'alert-Softskill', 200);
+}
 
 
 
@@ -816,6 +767,18 @@ function validateForm() {
             input.validate(); // Trigger validation
             if (!firstInvalidElement) firstInvalidElement = element;
             allInputsValid = false;
+        } else if (input.id === 'nim' && element.value.length < 11) {
+            blurNIM();
+            if (!firstInvalidElement) firstInvalidElement = element;
+            allInputsValid = false;
+        } else if (input.id === 'nomor-hp' && element.value.length < 10) {
+            blurHp();
+            if (!firstInvalidElement) firstInvalidElement = element;
+            allInputsValid = false;
+        } else if (input.id === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(element.value)) {
+            blurEmail();
+            if (!firstInvalidElement) firstInvalidElement = element;
+            allInputsValid = false;
         }
     });
 
@@ -823,7 +786,14 @@ function validateForm() {
     var divisiMekanikValid = checkCheckboxGroup('divisi-mekanik', 'form-group-Divisi-Mekanik', 'alert-DevisiMekanik', 'kotak-divisi-Mekanik');
     var divisiNonMekanikValid = checkCheckboxGroup('divisi-nonmekanik', 'form-group-Divisi-NonMekanik', 'alert-DevisiNonMekanik', 'kotak-divisi-nonmekanik');
 
-    allInputsValid = allInputsValid && statusValid && divisiMekanikValid && divisiNonMekanikValid;
+    var wordCountValid = true;
+    wordCountValid &= checkWordCount('alamat', 'label-alamat', 'alert-Alamat', 100);
+    wordCountValid &= checkWordCount('alasan-bergabung', 'label-alasan-bergabung', 'alert-AlasanGabung', 200);
+    wordCountValid &= checkWordCount('alasan-divisi', 'label-alasan-divisi', 'alert-AlasanDivisi', 200);
+    wordCountValid &= checkWordCount('riwayat-organisasi', 'label-riwayat-organisasi', 'alert-RiwayatOrganisasi', 100);
+    wordCountValid &= checkWordCount('kelebihan-softskill', 'label-kelebihan-softskill', 'alert-Softskill', 200);
+
+    allInputsValid = allInputsValid && statusValid && divisiMekanikValid && divisiNonMekanikValid && wordCountValid;
 
     if (allInputsValid) {
         updateValidationMessage(true);
@@ -836,9 +806,42 @@ function validateForm() {
     }
 }
 
+function checkWordCount(id, labelClass, alertId, limit) {
+    var input = document.getElementById(id);
+    var alertBox = document.getElementById(alertId);
+    var wordCount = input.value.trim().split(/\s+/).length;
+    var isEmpty = input.value.trim() === "";
+    var isValid = wordCount <= limit;
+
+    if (isEmpty) {
+        document.querySelector(`.${labelClass}`).classList.add('red');
+        document.getElementById(`kotak-${id}`).classList.add('red-border');
+        document.getElementById(`icon-${id}`).classList.add('red-icon');
+        document.getElementById(`separator-${id}`).classList.add('red-separator');
+        alertBox.innerHTML = '<ion-icon name="alert-circle-outline"></ion-icon> Harap isi form ini';
+        alertBox.classList.add('show');
+        isValid = false;
+    } else if (!isValid) {
+        document.querySelector(`.${labelClass}`).classList.add('red');
+        document.getElementById(`kotak-${id}`).classList.add('red-border');
+        document.getElementById(`icon-${id}`).classList.add('red-icon');
+        document.getElementById(`separator-${id}`).classList.add('red-separator');
+        alertBox.innerHTML = `<ion-icon name="alert-circle-outline"></ion-icon> Maksimal ${limit} Kata`;
+        alertBox.classList.add('show');
+    } else {
+        document.querySelector(`.${labelClass}`).classList.remove('red');
+        document.getElementById(`kotak-${id}`).classList.remove('red-border');
+        document.getElementById(`icon-${id}`).classList.remove('red-icon');
+        document.getElementById(`separator-${id}`).classList.remove('red-separator');
+        alertBox.classList.remove('show');
+    }
+
+    return isValid;
+}
+
 function checkCheckboxGroup(groupName, containerClass, alertId, inputContainerId) {
     var checkboxes = document.getElementsByName(groupName);
-    var container = document.querySelector('.' + containerClass);
+    var container = document.querySelector(`.${containerClass}`);
     var alertBox = document.getElementById(alertId);
     var inputContainer = document.getElementById(inputContainerId);
     var isAnyChecked = Array.from(checkboxes).some(checkbox => checkbox.checked);
@@ -873,5 +876,6 @@ function updateValidationMessage(isValid) {
     }
     messageBox.classList.add('show');
 }
+
 
 
