@@ -5,7 +5,7 @@
 
 body {
     margin: 0;
-    background-color: var(--Hijau);
+    background-color:  #18aa4159;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -14,13 +14,13 @@ body {
 
 :root{
     --Abu:#73777a;
-    --Hijau: #18AA42;
+    --Hijau: #18aa41;
   }
 
 
 .kotak-form {
     position: relative;
-    width: 40%;
+    width: 46.5%;
     border-radius: 15px;
     max-width: 1200px;
     height: auto; /* Mengubah tinggi menjadi otomatis */
@@ -39,26 +39,28 @@ body {
 /*====================================== Judul ====================================*/
 .kotak-judul {
     position: relative;
-    width: auto;
-    border-radius: 10px;
+    width: 52%;
+    border-radius: 15px;
+    max-width: 1200px;
     height: auto;
-    background: linear-gradient(135deg, #14fd3e 0%,#18AA42 100%);
-    margin: 20px 0;
-    overflow: hidden;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    background: rgb(255, 255, 255);
+    margin: 10px 40px;
+    padding: 0px;
+    overflow: auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), /* Menambahkan bayangan ke semua sisi */
+                0 2px 4px rgba(0, 0, 0, 0.1),
+                0 2px 4px rgba(0, 0, 0, 0.1),
+                0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.kotak-judul h1 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 18px;
-    font-weight: 900;  
-    margin: 0; 
-    color: #FFFFFF; 
-    text-transform: uppercase;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+.responsive-svg {
+    width: 100%;
+    height: auto;
+    border-radius: 0px;
+    display: block;
 }
+
+
 
 
 
@@ -81,7 +83,7 @@ body {
 
 .kotak-SubJudul h2 {
     font-family: 'Lexend', Arial, sans-serif;
-    font-size: 14px;
+    font-size: 11px;
     font-weight: 600;  
     margin: 0; 
     color: #333;
@@ -149,7 +151,7 @@ body {
 .kotak-nama input {
     border: none;
     outline: none;
-    font-size: 16px;
+    font-size: 14px;
     flex-grow: 1;
     background: none;
     color: #333; 
@@ -223,7 +225,7 @@ body {
 .kotak-email input {
     border: none;
     outline: none;
-    font-size: 16px;
+    font-size: 14px;
     flex-grow: 1;
     background: none;
     color: #333; 
@@ -297,7 +299,7 @@ body {
 .kotak-nomor-hp input {
     border: none;
     outline: none;
-    font-size: 16px;
+    font-size: 14px;
     flex-grow: 1;
     background: none;
     color: #333; 
@@ -372,7 +374,7 @@ body {
     width: 100%;
     border: none;
     outline: none;
-    font-size: 16px;
+    font-size: 14px;
     flex-grow: 1;
     background: none;
     color: #333;
@@ -382,7 +384,9 @@ body {
 
 .kotak-alamat textarea::placeholder {
     color: #999;
+    font-family: Arial, sans-serif;
 }
+
 
 
 
@@ -534,7 +538,7 @@ body {
 .kotak-asal-sekolah input {
     border: none;
     outline: none;
-    font-size: 16px;
+    font-size: 14px;
     flex-grow: 1;
     background: none;
     color: #333; 
@@ -606,7 +610,7 @@ body {
 .kotak-nim input {
     border: none;
     outline: none;
-    font-size: 16px;
+    font-size: 14px;
     flex-grow: 1;
     background: none;
     color: #333; 
@@ -675,7 +679,7 @@ body {
 .kotak-program-studi input {
     border: none;
     outline: none;
-    font-size: 16px;
+    font-size: 14px;
     flex-grow: 1;
     background: none;
     color: #333; 
@@ -749,7 +753,7 @@ body {
 .kotak-kelas input {
     border: none;
     outline: none;
-    font-size: 16px;
+    font-size: 14px;
     flex-grow: 1;
     background: none;
     color: #333; 
@@ -1014,7 +1018,7 @@ body {
     width: 100%;
     border: none;
     outline: none;
-    font-size: 16px;
+    font-size: 14px;
     font-family: Arial, sans-serif; /* Menggunakan font standar */
     color: #333;
     min-height: 100px;
@@ -1110,7 +1114,7 @@ body {
     width: 100%;
     border: none;
     outline: none;
-    font-size: 16px;
+    font-size: 14px;
     font-family: Arial, sans-serif; /* Menggunakan font standar */
     color: #333;
     min-height: 100px;
@@ -1184,7 +1188,7 @@ body {
     width: 100%;
     border: none;
     outline: none;
-    font-size: 16px;
+    font-size: 14px;
     font-family: Arial, sans-serif; /* Menggunakan font standar */
     color: #333;
     min-height: 100px;
@@ -1266,34 +1270,22 @@ body {
     width: 100%;
     border: none;
     outline: none;
-    font-size: 16px;
-    flex-grow: 1;
-    background: none;
-    color: #333;
-    resize: vertical; /* Allows vertical resizing */
-}
-
-.kotak-alasan-bergabung textarea::placeholder {
-    color: #999;
-}
-
-
-.kotak-alasan-bergabung textarea {
-    width: 100%;
-    border: none;
-    outline: none;
-    font-size: 16px;
-    font-family: Arial, sans-serif; /* Menggunakan font standar */
-    color: #333;
+    font-size: 14px;
     min-height: 100px;
-    resize: vertical; /* Allows vertical resizing */
+    flex-grow: 1;
+    font-family: Arial, sans-serif;
     background: none;
+    color: #333;
+    resize: vertical; /* Allows vertical resizing */
 }
 
 .kotak-alasan-bergabung textarea::placeholder {
     color: #999;
-    font-family: Arial, sans-serif; /* Menggunakan font standar untuk placeholder */
+    font-family: Arial, sans-serif;
 }
+
+
+
 
 
 
@@ -1306,7 +1298,7 @@ body {
     display: none;
     color: red;
     margin-top: 5px;
-    font-size: 14px;
+    font-size: 12px;
     font-family: 'Lexend', Arial, sans-serif;
     align-items: center;
     overflow: hidden;
@@ -1463,6 +1455,34 @@ body {
 
 
 
+@media (max-width: 777px) {
+
+
+    .kotak-judul {
+        position: relative;
+        width: 55%;
+        border-radius: 15px;
+        max-width: 1200px;
+        height: auto;
+        background: NONE;
+        margin: 10px 40px;
+        padding: 0px;
+        overflow: auto;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), /* Menambahkan bayangan ke semua sisi */
+                    0 2px 4px rgba(0, 0, 0, 0.1),
+                    0 2px 4px rgba(0, 0, 0, 0.1),
+                    0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    .responsive-svg {
+        width: 100%;
+        height: auto;
+        border-radius: 0px;
+        display: block;
+    }
+
+    
+}
 
 
 
@@ -1471,7 +1491,7 @@ body {
 @media (max-width: 625px) {
     .kotak-form {
         position: relative;
-        width: 80%;
+        width: 70%;
         border-radius: 15px;
         max-width: 1200px;
         height: auto; /* Mengubah tinggi menjadi otomatis */
@@ -1483,4 +1503,86 @@ body {
                     0 2px 4px rgba(0, 0, 0, 0.1),
                     0 2px 4px rgba(0, 0, 0, 0.1);
     }
+
+    .kotak-judul {
+        position: relative;
+        width: 79%;
+        border-radius: 15px;
+        max-width: 1200px;
+        height: auto;
+        background: none;
+        margin: 10px 40px;
+        padding: 0px;
+        overflow: auto;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), /* Menambahkan bayangan ke semua sisi */
+                    0 2px 4px rgba(0, 0, 0, 0.1),
+                    0 2px 4px rgba(0, 0, 0, 0.1),
+                    0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    .responsive-svg {
+        width: 100%;
+        height: auto;
+        border-radius: 0px;
+        display: block;
+    }
+
+    
+}
+
+
+
+
+@media (max-width: 431px) {
+    .kotak-judul {
+        position: relative;
+        width: 85%;
+        border-radius: 15px;
+        max-width: 1200px;
+        height: auto;
+        background: none;
+        margin: 10px 40px;
+        padding: 0px;
+        overflow: auto;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), /* Menambahkan bayangan ke semua sisi */
+                    0 2px 4px rgba(0, 0, 0, 0.1),
+                    0 2px 4px rgba(0, 0, 0, 0.1),
+                    0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    .responsive-svg {
+        width: 100%;
+        height: auto;
+        border-radius: 0px;
+        display: block;
+    }
+
+}
+
+
+
+@media (max-width: 376px) {
+    .kotak-judul {
+        position: relative;
+        width: 88%;
+        border-radius: 15px;
+        max-width: 1200px;
+        height: auto;
+        background: NONE;
+        margin: 10px 40px;
+        padding: 0px;
+        overflow: auto;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), /* Menambahkan bayangan ke semua sisi */
+                    0 2px 4px rgba(0, 0, 0, 0.1),
+                    0 2px 4px rgba(0, 0, 0, 0.1),
+                    0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    .responsive-svg {
+        width: 100%;
+        height: auto;
+        border-radius: 0px;
+        display: block;
+    }
+
 }
