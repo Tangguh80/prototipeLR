@@ -879,3 +879,192 @@ function updateValidationMessage(isValid) {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /*====================================== overlay bantuan ====================================*/
+        document.getElementById('helpCentreButton').addEventListener('click', function(event) {
+            event.preventDefault();
+            document.getElementById('overlayBantuan').style.display = 'flex';
+        });
+
+        document.getElementById('closeBantuan').addEventListener('click', function() {
+            document.getElementById('overlayBantuan').style.display = 'none';
+        });
+
+        document.getElementById('overlayBantuan').addEventListener('click', function(event) {
+            if (event.target === this) {
+                document.getElementById('overlayBantuan').style.display = 'none';
+            }
+        });
+
+        /*====================================== overlay pertanyaan ====================================*/
+        document.getElementById('contactButton').addEventListener('click', function(event) {
+            event.preventDefault();
+            document.getElementById('overlaypertanyaan').style.display = 'flex';
+        });
+
+        document.getElementById('tanyaButton').addEventListener('click', function(event) {
+            event.preventDefault();
+            document.getElementById('overlaypertanyaan').style.display = 'flex';
+        });
+
+        document.getElementById('closepertanyaan').addEventListener('click', function() {
+            document.getElementById('overlaypertanyaan').style.display = 'none';
+        });
+
+        document.getElementById('overlaypertanyaan').addEventListener('click', function(event) {
+            if (event.target === this) {
+                this.style.display = 'none';
+            }
+        });
+
+
+
+
+
+
+
+        /*====================================== overlay Refresh ====================================*/
+        // Flag to track if refresh should proceed
+        let allowRefresh = false;
+
+        // Get elements
+        const overlayRefresh = document.getElementById('overlayRefresh');
+        const btnLeave = document.getElementById('btnLeave');
+        const btnCancel = document.getElementById('btnCancel');
+        const closeRefresh = document.getElementById('closeRefresh');
+
+        // Function to prevent default action and show overlay
+        function preventRefresh(e) {
+            if (!allowRefresh) {
+                e.preventDefault();
+                overlayRefresh.style.display = 'flex';
+                e.returnValue = ''; // Required for some browsers
+                return '';
+            }
+        }
+
+        // Show confirmation dialog when the user tries to close or refresh the page
+        window.addEventListener('beforeunload', preventRefresh);
+
+        // Handle "Tinggalkan" button click
+        btnLeave.addEventListener('click', function() {
+            allowRefresh = true;
+            window.location.reload();
+        });
+
+        // Handle "Batal" button and close icon click
+        btnCancel.addEventListener('click', function() {
+            overlayRefresh.style.display = 'none';
+        });
+
+        closeRefresh.addEventListener('click', function() {
+            overlayRefresh.style.display = 'none';
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // Function to redirect to the loading page
+function redirectToLoadingPage() {
+    var currentUrl = window.location.href;
+    var loadingUrl = "/Loading/Loading.html"; // Adjust this path as needed
+
+    // Store the current URL and set the flag for redirection
+    sessionStorage.setItem("loadingRedirect", "true");
+    window.location.href = loadingUrl + "?from=" + encodeURIComponent(currentUrl);
+}
+
+// Event listener for detecting refresh
+window.addEventListener("beforeunload", function (event) {
+    // Set the flag only if not from the loading page
+    if (!new URLSearchParams(window.location.search).has("from")) {
+        sessionStorage.setItem("refresh", "true");
+    }
+});
+
+// Check when the page loads
+document.addEventListener("DOMContentLoaded", function () {
+    var isRefreshed = sessionStorage.getItem("refresh") === "true";
+    var isFromLoadingPage = new URLSearchParams(window.location.search).has("from");
+    var hasRedirectedToLoading = sessionStorage.getItem("loadingRedirect") === "true";
+    var isNewSession = !sessionStorage.getItem("hasVisited");
+
+    // Mark the session as visited
+    sessionStorage.setItem("hasVisited", "true");
+
+    // Remove the refresh flag after checking
+    sessionStorage.removeItem("refresh");
+
+    // Redirect to the loading page if the page is refreshed, opened in a new tab, or not from the loading page
+    if ((isRefreshed || isNewSession) && !isFromLoadingPage && !hasRedirectedToLoading) {
+        redirectToLoadingPage();
+    } else if (isFromLoadingPage) {
+        // Clean up session storage and URL parameters after redirection
+        sessionStorage.removeItem("loadingRedirect");
+        var cleanUrl = window.location.href.split("?")[0];
+        window.history.replaceState({}, document.title, cleanUrl);
+    } else if (hasRedirectedToLoading) {
+        // Ensure the flag is removed after redirection to prevent repeat refresh
+        sessionStorage.removeItem("loadingRedirect");
+    }
+});
+
