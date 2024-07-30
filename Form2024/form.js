@@ -1026,7 +1026,7 @@ function updateValidationMessage(isValid) {
         // Function to redirect to the loading page
 function redirectToLoadingPage() {
     var currentUrl = window.location.href;
-    var loadingUrl = "/Loading/Loading.html"; // Adjust this path as needed
+    var loadingUrl = "Loading/Loading.html"; // Adjust this path as needed
 
     // Store the current URL and set the flag for redirection
     sessionStorage.setItem("loadingRedirect", "true");
